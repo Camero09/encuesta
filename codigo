@@ -1,0 +1,577 @@
+import '/components/bottom_nav/bottom_nav_widget.dart';
+import '/components/bottom_nav_child5/bottom_nav_child5_widget.dart';
+import '/components/button/button_widget.dart';
+import '/components/info_row/info_row_widget.dart';
+import '/components/stat_pill/stat_pill_widget.dart';
+import '/flutter_flow/flutter_flow_theme.dart';
+import '/flutter_flow/flutter_flow_util.dart';
+import '/flutter_flow/flutter_flow_widgets.dart';
+import 'dart:ui';
+import '/index.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:provider/provider.dart';
+
+import 'perfil_del_alumno_model.dart';
+export 'perfil_del_alumno_model.dart';
+
+class PerfilDelAlumnoWidget extends StatefulWidget {
+  const PerfilDelAlumnoWidget({super.key});
+
+  static String routeName = 'PerfilDelAlumno';
+  static String routePath = '/perfilDelAlumno';
+
+  @override
+  State<PerfilDelAlumnoWidget> createState() => _PerfilDelAlumnoWidgetState();
+}
+
+class _PerfilDelAlumnoWidgetState extends State<PerfilDelAlumnoWidget> {
+  late PerfilDelAlumnoModel _model;
+
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+
+  @override
+  void initState() {
+    super.initState();
+    _model = createModel(context, () => PerfilDelAlumnoModel());
+  }
+
+  @override
+  void dispose() {
+    _model.dispose();
+
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        FocusScope.of(context).unfocus();
+        FocusManager.instance.primaryFocus?.unfocus();
+      },
+      child: Scaffold(
+        key: scaffoldKey,
+        backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
+        body: SingleChildScrollView(
+          primary: false,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                height: 220,
+                child: Stack(
+                  alignment: AlignmentDirectional(-1, -1),
+                  children: [
+                    Container(
+                      height: 160,
+                      decoration: BoxDecoration(
+                        gradient: LinearGradient(
+                          colors: [
+                            FlutterFlowTheme.of(context).primary,
+                            FlutterFlowTheme.of(context).primary80
+                          ],
+                          stops: [0, 1],
+                          begin: AlignmentDirectional(0, -1),
+                          end: AlignmentDirectional(0, 1),
+                        ),
+                        borderRadius: BorderRadius.only(
+                          bottomLeft: Radius.circular(24),
+                          bottomRight: Radius.circular(24),
+                        ),
+                        shape: BoxShape.rectangle,
+                      ),
+                    ),
+                    Align(
+                      alignment: AlignmentDirectional(0, 1),
+                      child: Container(
+                        child: Padding(
+                          padding: EdgeInsetsDirectional.fromSTEB(24, 0, 24, 0),
+                          child: Container(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.max,
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              crossAxisAlignment: CrossAxisAlignment.end,
+                              children: [
+                                Container(
+                                  width: 96,
+                                  height: 96,
+                                  decoration: BoxDecoration(
+                                    color: FlutterFlowTheme.of(context)
+                                        .secondaryBackground,
+                                    borderRadius: BorderRadius.circular(12),
+                                    shape: BoxShape.rectangle,
+                                  ),
+                                  alignment: AlignmentDirectional(0, 0),
+                                  child: Text(
+                                    'JD',
+                                    textAlign: TextAlign.center,
+                                    maxLines: 1,
+                                    style: FlutterFlowTheme.of(context)
+                                        .labelMedium
+                                        .override(
+                                          font: GoogleFonts.sourceSans3(
+                                            fontWeight: FontWeight.w600,
+                                            fontStyle:
+                                                FlutterFlowTheme.of(context)
+                                                    .labelMedium
+                                                    .fontStyle,
+                                          ),
+                                          color: FlutterFlowTheme.of(context)
+                                              .primary,
+                                          fontSize: 36.48,
+                                          letterSpacing: 0.0,
+                                          fontWeight: FontWeight.w600,
+                                          fontStyle:
+                                              FlutterFlowTheme.of(context)
+                                                  .labelMedium
+                                                  .fontStyle,
+                                          lineHeight: 1.6,
+                                        ),
+                                    overflow: TextOverflow.clip,
+                                  ),
+                                ),
+                                Padding(
+                                  padding: EdgeInsetsDirectional.fromSTEB(
+                                      0, 0, 0, 8),
+                                  child: Column(
+                                    mainAxisSize: MainAxisSize.min,
+                                    mainAxisAlignment: MainAxisAlignment.start,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        'Juan Delgado',
+                                        style: FlutterFlowTheme.of(context)
+                                            .headlineMedium
+                                            .override(
+                                              font: GoogleFonts.sourceSans3(
+                                                fontWeight: FontWeight.bold,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .headlineMedium
+                                                        .fontStyle,
+                                              ),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .primaryText,
+                                              letterSpacing: 0.0,
+                                              fontWeight: FontWeight.bold,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .headlineMedium
+                                                      .fontStyle,
+                                              lineHeight: 1.6,
+                                            ),
+                                      ),
+                                      Text(
+                                        'Matrícula: 111111',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyMedium
+                                            .override(
+                                              font: GoogleFonts.sourceSans3(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyMedium
+                                                        .fontStyle,
+                                              ),
+                                              color:
+                                                  FlutterFlowTheme.of(context)
+                                                      .secondaryText,
+                                              letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyMedium
+                                                      .fontStyle,
+                                              lineHeight: 1.8,
+                                            ),
+                                      ),
+                                    ].divide(SizedBox(height: 4)),
+                                  ),
+                                ),
+                              ].divide(SizedBox(width: 24)),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.all(24),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: [
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        wrapWithModel(
+                          model: _model.statPillModel1,
+                          updateCallback: () => safeSetState(() {}),
+                          child: StatPillWidget(
+                            label: 'Semestre',
+                            tone: FlutterFlowTheme.of(context).primary,
+                            value: '6to',
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.statPillModel2,
+                          updateCallback: () => safeSetState(() {}),
+                          child: StatPillWidget(
+                            label: 'Promedio',
+                            tone: FlutterFlowTheme.of(context).success,
+                            value: '9.2',
+                          ),
+                        ),
+                        wrapWithModel(
+                          model: _model.statPillModel3,
+                          updateCallback: () => safeSetState(() {}),
+                          child: StatPillWidget(
+                            label: 'Créditos',
+                            tone: FlutterFlowTheme.of(context).tertiary,
+                            value: '184',
+                          ),
+                        ),
+                      ].divide(SizedBox(width: 16)),
+                    ),
+                    Container(
+                      decoration: BoxDecoration(
+                        color: FlutterFlowTheme.of(context).secondaryBackground,
+                        borderRadius: BorderRadius.circular(6),
+                        shape: BoxShape.rectangle,
+                        border: Border.all(
+                          color: FlutterFlowTheme.of(context).alternate,
+                          width: 1,
+                        ),
+                      ),
+                      child: Padding(
+                        padding: EdgeInsets.all(24),
+                        child: Container(
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                            children: [
+                              Text(
+                                'Información Académica',
+                                style: FlutterFlowTheme.of(context)
+                                    .titleMedium
+                                    .override(
+                                      font: GoogleFonts.sourceSans3(
+                                        fontWeight: FontWeight.bold,
+                                        fontStyle: FlutterFlowTheme.of(context)
+                                            .titleMedium
+                                            .fontStyle,
+                                      ),
+                                      letterSpacing: 0.0,
+                                      fontWeight: FontWeight.bold,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                      lineHeight: 1.7,
+                                    ),
+                              ),
+                              Divider(
+                                height: 16,
+                                thickness: 1,
+                                indent: 0,
+                                endIndent: 0,
+                                color: FlutterFlowTheme.of(context).alternate,
+                              ),
+                              wrapWithModel(
+                                model: _model.infoRowModel1,
+                                updateCallback: () => safeSetState(() {}),
+                                child: InfoRowWidget(
+                                  icon: Icon(
+                                    Icons.school_rounded,
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    size: 18,
+                                  ),
+                                  label: 'Carrera',
+                                  value: 'Ingeniería en Sistemas',
+                                ),
+                              ),
+                              wrapWithModel(
+                                model: _model.infoRowModel2,
+                                updateCallback: () => safeSetState(() {}),
+                                child: InfoRowWidget(
+                                  icon: Icon(
+                                    Icons.verified_user_rounded,
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    size: 18,
+                                  ),
+                                  label: 'Estatus',
+                                  value: 'Alumno Regular',
+                                ),
+                              ),
+                              wrapWithModel(
+                                model: _model.infoRowModel3,
+                                updateCallback: () => safeSetState(() {}),
+                                child: InfoRowWidget(
+                                  icon: Icon(
+                                    Icons.mail_rounded,
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    size: 18,
+                                  ),
+                                  label: 'Correo Institucional',
+                                  value: 'j.delgado@univote.edu',
+                                ),
+                              ),
+                              wrapWithModel(
+                                model: _model.infoRowModel4,
+                                updateCallback: () => safeSetState(() {}),
+                                child: InfoRowWidget(
+                                  icon: Icon(
+                                    Icons.calendar_today_rounded,
+                                    color: FlutterFlowTheme.of(context).primary,
+                                    size: 18,
+                                  ),
+                                  label: 'Periodo Actual',
+                                  value: '2024 - Otoño',
+                                ),
+                              ),
+                            ].divide(SizedBox(height: 24)),
+                          ),
+                        ),
+                      ),
+                    ),
+                    Column(
+                      mainAxisSize: MainAxisSize.min,
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      crossAxisAlignment: CrossAxisAlignment.stretch,
+                      children: [
+                        Text(
+                          'Accesos Rápidos',
+                          style:
+                              FlutterFlowTheme.of(context).titleMedium.override(
+                                    font: GoogleFonts.sourceSans3(
+                                      fontWeight: FontWeight.bold,
+                                      fontStyle: FlutterFlowTheme.of(context)
+                                          .titleMedium
+                                          .fontStyle,
+                                    ),
+                                    letterSpacing: 0.0,
+                                    fontWeight: FontWeight.bold,
+                                    fontStyle: FlutterFlowTheme.of(context)
+                                        .titleMedium
+                                        .fontStyle,
+                                    lineHeight: 1.7,
+                                  ),
+                        ),
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.goNamed(PlanDeEstudiosWidget.routeName);
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.circular(6),
+                              shape: BoxShape.rectangle,
+                              border: Border.all(
+                                color: FlutterFlowTheme.of(context).alternate,
+                                width: 1,
+                              ),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(16),
+                              child: Container(
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.grid_view_rounded,
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      size: 24,
+                                    ),
+                                    Expanded(
+                                      flex: 1,
+                                      child: Text(
+                                        'Ver Plan de Estudios',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .override(
+                                              font: GoogleFonts.sourceSans3(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
+                                              ),
+                                              letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontStyle,
+                                              lineHeight: 1.8,
+                                            ),
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.chevron_right_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 24,
+                                    ),
+                                  ].divide(SizedBox(width: 16)),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                        InkWell(
+                          splashColor: Colors.transparent,
+                          focusColor: Colors.transparent,
+                          hoverColor: Colors.transparent,
+                          highlightColor: Colors.transparent,
+                          onTap: () async {
+                            context.goNamed(HorarioEscolarWidget.routeName);
+                          },
+                          child: Container(
+                            decoration: BoxDecoration(
+                              color: FlutterFlowTheme.of(context)
+                                  .secondaryBackground,
+                              borderRadius: BorderRadius.circular(6),
+                              shape: BoxShape.rectangle,
+                              border: Border.all(
+                                color: FlutterFlowTheme.of(context).alternate,
+                                width: 1,
+                              ),
+                            ),
+                            child: Padding(
+                              padding: EdgeInsets.all(16),
+                              child: Container(
+                                child: Row(
+                                  mainAxisSize: MainAxisSize.max,
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  children: [
+                                    Icon(
+                                      Icons.schedule_rounded,
+                                      color:
+                                          FlutterFlowTheme.of(context).primary,
+                                      size: 24,
+                                    ),
+                                    Expanded(
+                                      flex: 1,
+                                      child: Text(
+                                        'Mi Horario Semestral',
+                                        style: FlutterFlowTheme.of(context)
+                                            .bodyLarge
+                                            .override(
+                                              font: GoogleFonts.sourceSans3(
+                                                fontWeight:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontWeight,
+                                                fontStyle:
+                                                    FlutterFlowTheme.of(context)
+                                                        .bodyLarge
+                                                        .fontStyle,
+                                              ),
+                                              letterSpacing: 0.0,
+                                              fontWeight:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontWeight,
+                                              fontStyle:
+                                                  FlutterFlowTheme.of(context)
+                                                      .bodyLarge
+                                                      .fontStyle,
+                                              lineHeight: 1.8,
+                                            ),
+                                      ),
+                                    ),
+                                    Icon(
+                                      Icons.chevron_right_rounded,
+                                      color: FlutterFlowTheme.of(context)
+                                          .secondaryText,
+                                      size: 24,
+                                    ),
+                                  ].divide(SizedBox(width: 16)),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ].divide(SizedBox(height: 16)),
+                    ),
+                    InkWell(
+                      splashColor: Colors.transparent,
+                      focusColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      onTap: () async {
+                        context.goNamed(InicioDeSesiNWidget.routeName);
+                      },
+                      child: wrapWithModel(
+                        model: _model.buttonModel,
+                        updateCallback: () => safeSetState(() {}),
+                        child: ButtonWidget(
+                          icon: Icon(
+                            Icons.logout_rounded,
+                            color: FlutterFlowTheme.of(context).primaryText,
+                            size: 24,
+                          ),
+                          iconPresent: true,
+                          iconEndPresent: false,
+                          content: 'Cerrar Sesión',
+                          variant: 'outline',
+                          size: 'medium',
+                          fullWidth: true,
+                          loading: false,
+                          disabled: false,
+                        ),
+                      ),
+                    ),
+                  ].divide(SizedBox(height: 24)),
+                ),
+              ),
+              Align(
+                alignment: AlignmentDirectional(0, 1),
+                child: Container(
+                  child: wrapWithModel(
+                    model: _model.bottomNavModel,
+                    updateCallback: () => safeSetState(() {}),
+                    child: BottomNavWidget(
+                      child: () => BottomNavChild5Widget(),
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
